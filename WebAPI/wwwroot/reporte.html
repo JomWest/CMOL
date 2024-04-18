@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Informe de Ventas</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/datetime/1.5.1/css/dataTables.dateTime.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>   
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js"></script>
+    <script src="https://cdn.datatables.net/datetime/1.5.1/js/dataTables.dateTime.min.js"></script>
+    
+</head>
+<body>
+    <h1>Informe de Ventas</h1>
+    <table border="0" cellspacing="5" cellpadding="5">
+        <tbody>
+            <tr>
+                <td>Fecha de Inicio:</td>
+                <td><input type="text" id="min" name="min"></td>
+                <td>Fecha de Fin:</td>
+                <td><input type="text" id="max" name="max"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table id="ventasTable" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>No Venta</th>
+                <th>Cliente</th>
+                <th>Vendedor</th>
+                <th>Fecha</th>
+                <!-- Agrega aquí los encabezados de las demás columnas -->
+                <th>Total</th>
+                <th>Imprimir</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    
+
+    <script>
+        var tabla;
+        $(document).ready(function () {
+            tabla = $('#ventasTable').DataTable({
+                ajax: {
+                    url: 'http://localhost:5052/FechaController/', 
+                    dataSrc: 'data'
+                },
+                dom: 'Bfrtip',
+                buttons: [
+                    'copyHtml5',
+                    'excelHtml5',
+                    'csvHtml5',
+                    'pdfHtml5',
+                    'print'
+                    
+                ],
+                
+                columns: [
+                    { data: 'idfactura' },
+                    { data: 'nombreCliente' },
+                    { data: 'nombreTrabajador' },
+                    { data: 'fecha' },
+                    // Agrega aquí las columnas correspondientes
+                    { data: 'totalFactura' },
+                    {
+                        data: null,
+                        defaultContent: '<button>Imprimir Factura</button>',
+                        targets: -5
+                    },                    
+                ],
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/es-ES.json',
+                },
+                
+            });
+            
+			//Comportamiento del boton imprimir
+            tabla.on('click', 'button', function (e) {
+            let dato = tabla.row(e.target.closest('tr')).data();
+            let url = 'http://localhost:5052/exportarPDFUsuario/' + dato.IdFactura;
+            window.open(url, '_blank');
+        });
+
+        });
+        
+        
+
+        let fMin, fMax;
+ 
+        // Funcion para buscar datos por fechas
+        DataTable.ext.search.push(function (settings, data, dataIndex) {
+
+            let min = fMin.val();
+            let max = fMax.val();
+            let fecha = moment(data[1]).format('DD/MM/YYYY');
+        
+            if (
+                (min === null && max === null) ||
+                (min === null && fecha <= max) ||
+                (min <= fecha && max === null) ||
+                (min <= fecha && fecha <= max)
+            ) {
+                return true;
+            }
+            return false;
+        });
+        
+        // Creando las entradas
+        fMin = new DateTime('#min', {
+    format: 'DD/MM/YYYY'
+});
+
+fMax = new DateTime('#max', {
+    format: 'DD/MM/YYYY'
+});
+        
+        
+        // Vuelve a pintar la tabla
+        document.querySelectorAll('#min, #max').forEach((el) => {
+            el.addEventListener('change', () => tabla.draw());
+        });
+
+
+
+    </script>
+</body>
+</html>

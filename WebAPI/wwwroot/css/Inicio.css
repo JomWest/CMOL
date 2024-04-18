@@ -1,0 +1,53 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1e1e1e;
+  font-size: 16px;
+  background-image: url('img/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0; /* Remove default body margin for better mobile rendering */
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.header-area .navbar {
+  background-color: transparent;
+}
+
+.header-area .navbar-toggler {
+  border: none;
+}
+
+.header-area .navbar-toggler-icon {
+  background-color: #fff; /* Color del icono del botón de menú */
+}
+
+.header-area .navbar-nav {
+  margin-top: 15px;
+  text-align: center; /* Centra los elementos del menú en dispositivos pequeños */
+}
+
+.header-area .navbar-nav .nav-item {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.header-area .navbar-nav .nav-link {
+  font-weight: 500;
+  font-size: 16px; /* Ajuste del tamaño de fuente para mejorar la apariencia en dispositivos pequeños */
+  text-transform: capitalize;
+  color: #2a2a2a;
+  border: transparent;
+  border-radius: 18px;
+  padding: 8px 15px;
+  letter-spacing: 0.6px;
+}
+
+.header-area .navbar-brand img {
+  max-width: 150px; /* Ajuste del ancho máximo del logo para dispositivos pequeños */
+  height: auto;
+}

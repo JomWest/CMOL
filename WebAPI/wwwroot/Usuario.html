@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de usuarios de CellMasterOnline</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/usuario.css">
+</head>
+
+<body style="background-image: url('img/background-2.jpg');">
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="header-area">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/Logo.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="usuario.html">Usuarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Proveedores.html">Proveedores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ReporteInventario.html">Inventario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Facturacion.html">Facturar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ComprasProductos.html">Registrar Compras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Reportes.html">Reportes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="CambiarContraseña.html">Cambiar Contraseña</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <button class="help-button" onclick="redireccionarPagina()">
+            <i class="fas fa-question"></i> Ayuda
+        </button>
+        <script>
+            function redireccionarPagina() {
+                window.location.href = "ayudausuario.html";
+            }
+        </script>
+        <br>
+        <div class="container">
+            <section id="gestion-usuarios">
+                <h2>Gestión de Usuarios</h2>
+                <button class="btn btn-primary" id="nuevaUsuarioBtn">Nuevo Usuario</button>
+                <form id="userForm">
+                    <div class="form-row">
+                        <div class="form-group col-md-2">
+                            <label for="cedula">Cédula</label>
+                            <input type="text" class="form-control" id="cedula">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombreUsuario">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" class="form-control" id="apellidoUsuario">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="telefono">Telefono</label>
+                            <input type="text" class="form-control" id="telefonoUsuario">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="emailUsuario">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-2">
+                            <label for="rol">Rol</label>
+                            <select class="form-control" id="rolUsuario">
+                                <option value="Usuario Común">Usuario Común</option>
+                                <option value="Administrador">Administrador</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="estado">Estado</label>
+                            <select class="form-control" id="estadoUsuario">
+                                <option value="Activo">Activo</option>
+                                <option value="Inactivo">Inactivo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary"   data-toggle="modal" data-target="#nuevoClienteModal"><i
+                            class="fas fa-plus"></i> Guardar</button>
+                            <button class="btn btn-success" data-toggle="modal" data-target="#nuevoClienteModal"><i
+                                class="BtnF"></i> Actualizar</button>
+                </form>
+                <br>
+            <div class="table-responsive">
+                <table class="table" >
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Cédula</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Teléfono</th>
+                            <th>Cargo</th>
+                            <th>Email</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+                                
+                            
+                    </tbody >
+                </table>
+            </div>
+                
+            </section>
+        </div>
+
+        <div class="modal fade" id="nuevoClienteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Credenciales</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="nombreClienteModal">Usuario</label>
+                            <input type="text" class="form-control" id="NameUsuarioModal"
+                                placeholder="Nombre de Usuario">
+                        </div>
+                        <div class="form-group">
+                            <label for="cedulaModal">Contraseña</label>
+                            <input type="password" class="form-control" id="ContraseñaModal"
+                                placeholder="Ingresa su contraseña">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefonoModal">Repita la Contraseña</label>
+                            <input type="password" class="form-control" id="RepitContraeñaModal"
+                                placeholder="Repetir la contraseña">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary" id="GuardarBtnModal">Guardar</button>
+                        <button type="button" class="btn btn-success" id="ActualizarBtnModal">Actualizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="JS/Usuarios.js"></script>
+
+
+</body>
+
+</html>

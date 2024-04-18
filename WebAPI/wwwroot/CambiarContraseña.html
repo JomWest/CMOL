@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de Contraseña</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="css/usuario.css">
+    <link rel="icon" href="../iconos/iconosOscuros/databaseDark.png">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body style="background-image: url('img/background-2.jpg');">
+    <div class="body">
+        <main class="container mt-4">
+            <div class="main">
+                <section class="container">
+                    <div class="encabezado"></div>
+                    <div class="container-body">
+                        <div class="form bg-light p-3 rounded">
+                            <h2 class="text-primary">Cambio de Contraseña</h2>
+                            <form>
+                                <div class="form-group">
+                                    <label for="usernameInput">Nombre de Usuario</label>
+                                    <input type="text" class="form-control" id="usernameInput" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="oldPasswordInput">Antigua Contraseña</label>
+                                    <input type="password" class="form-control" id="oldPasswordInput" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="newPasswordInput">Nueva Contraseña</label>
+                                    <input type="password" class="form-control" id="newPasswordInput" required>
+                                </div>
+                                <div class="text-center">
+                                    <button  type="button" class="btn btn-primary" id="UpdatePas">Cambiar Contraseña</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="JS/CambiarContraseña.js"></script>
+    <!-- Otros scripts necesarios -->
+</body>
+
+</html>

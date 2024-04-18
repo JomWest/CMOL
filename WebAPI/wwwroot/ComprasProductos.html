@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Compras</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+  <link rel="stylesheet" href="css/Facturacion.css">
+</head>
+
+<body style="background-image: url('img/background-2.jpg');">
+  <button class="help-button" onclick="redireccionarPagina()">
+    <i class="fas fa-question"></i> Ayuda
+</button>
+<script>
+    function redireccionarPagina() {
+        window.location.href = "ayudacompra.html";
+    }
+</script>
+  <header class="header-area">
+  </header>
+  <div class="extra-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <button class="btn btn-primary" id="nuevaVentaBtnC">Nueva Compra</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-4">
+    <section id="factura-form">
+      <h2 class="text-center">Nueva Compra</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-container">
+            <h3><i class="fas fa-box"></i> Datos de la Compra</h3>
+            <h3><i class="fas fa-calendar"></i> Fecha</h3>
+            <div class="form-group">
+              <label for="fecha">Fecha</label>
+              <input type="text" class="form-control" id="fechaCompras" placeholder="Fecha del día">
+            </div>
+            <h3><i class="fas fa-user"></i> No.Compra</h3>
+            <div class="form-group">
+              <label for="vendedor"> No.Compra</label>
+              <input type="text" class="form-control" id="NomeroCompra" placeholder="Nombre del vendedor">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-container">
+            <h3><i class="fas fa-user"></i> Datos del Proveedor</h3>
+            <button id="agregarProveedor" class="btn btn-primary" data-toggle="modal" data-target="#nuevoClienteModal"><i
+                class="fas fa-plus"></i> Agregar proveedor</button>
+            <div class="form-group">
+              <label for="nombreCliente">Nombre</label>
+              <input type="text" class="form-control" id="NombreProveedorFact" placeholder="Nombre del Proveedore">
+            </div>
+            <div class="form-group">
+              <label for="cedula">RUC</label>
+              <input type="text" class="form-control" id="RUCProveedor" placeholder="Ejemplo: xxx-xxxxxx-xxxx">
+            </div>
+            <div class="form-group">
+              <label for="telefono">Empresa</label>
+              <input type="text" class="form-control" id="EmpresaProveedor" placeholder="Nombre de la empresa">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="form-container">
+            <h3><i class="fas fa-box"></i> Datos del Producto</h3>
+            <div class="from-group">
+              <button id="AgregraProduct" class="btn btn-primary" data-toggle="modal" data-target="#gregarProductoModal"><i
+                  class="fas fa-plus"></i>Agregar Productos</button>
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="producto">Producto</label>
+              <input type="text" class="form-control" id="NombreProductosC" placeholder="Nombre del producto">
+            </div>
+            <div class="form-group">
+              <label for="codigoProducto">Código del Producto</label>
+              <input type="text" class="form-control" id="codigoProductoC" placeholder="Código del producto">
+            </div>
+            <div class="form-group">
+              <label for="categoria">Precio Venta</label>
+              <input type="text" class="form-control" id="PrecioVentaC" placeholder="Precio Venta">
+            </div>
+            <div class="form-group">
+              <label for="marca">Precio</label>
+              <input type="text" class="form-control" id="PrecioP" placeholder="Precio Del Producto">
+            </div>
+            <div class="form-group">
+              <label for="cantidad">Cantidad</label>
+              <input type="text" class="form-control" id="cantidadC" placeholder="Cantidad">
+            </div>
+          </div>
+          <button id="actualizar" class="btn btn-success"><i class="fas fa-sync"></i> Actualizar</button>
+          <button id="guardar" class="btn btn-primary"><i class="fas fa-save"></i> Guardar</button>
+        </div>
+      </div>
+    </section>
+    <section id="datagrid">
+      <h2 class="text-center">Productos Agregados</h2>
+      <div class="table-responsive">
+        <table id="Table">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Producto</th>
+              <th>Cod. Producto</th>
+              <th>Cantidad</th>
+              <th>Precio $</th>
+              <th>Editar</th>
+              <th>Eliminar</th>
+            </tr>
+          </thead>
+          <tbody class="tbodyYe2">
+          </tbody>
+        </table>
+    </section>
+  </div>
+
+  <section id="total-y-salir" class="mt-4 text-center">
+    <div class="container">
+      <div class="form-container">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Total</h3>
+            <div class="form-group">
+              <label for="totalDolar">Total $</label>
+              <input type="text" class="form-control" id="totalDolarc" readonly>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <button id="guardarCompra" class="btn btn-primary">
+              <i class="fas fa-save"></i> Guardar Compra
+            </button>
+            <button id="salir" class="btn btn-danger">
+              <i class="fas fa-sign-out-alt"></i> Salir
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="nuevoClienteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Nuevo Proveedor</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>RUC</th>
+                    <th>Nombre</th>
+                    <th>Empresa</th>
+                    <th>Teléfono</th>
+                    <th>Email</th>
+                    <th>Selcionar</th>
+                  </tr>
+                </thead>
+                <tbody class="tbody66">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="modal fade" id="gregarProductoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Seleccionar Productos</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+
+              <div class="form-group">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Id</th>
+                        <th>Producto</th>
+                        <th>Cod. Producto</th>
+                        <th>Categoría</th>
+                        <th>Marca</th>
+                        <th>Stock</th>
+                        <th>Stock Minimo</th>
+                        <th>Precio Venta</th>
+                        <th>Seleccionar</th>
+                      </tr>
+                    </thead>
+                    <tbody class="tbody99">
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="modal-footer">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="JS/ComprasProductos.js"></script>
+</body>
+
+</html>

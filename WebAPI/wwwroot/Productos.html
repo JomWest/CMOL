@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Compras</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="css/Facturacion.css">
+</head>
+
+<body style="background-image: url('img/background-2.jpg');">
+    <button class="help-button" onclick="redireccionarPagina()">
+        <i class="fas fa-question"></i> Ayuda
+    </button>
+    <script>
+        function redireccionarPagina() {
+            window.location.href = "ayudaproducto.html";
+        }
+    </script>
+    <header class="header-area">
+    </header>
+    <div class="extra-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <button class="btn btn-primary" id="nuevoProducto">Nuevo Producto</button>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4">
+        <section id="factura-form">
+            <h2 class="text-center">Nuevo Producto</h2>
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <div class="form-container">
+                        <h3><i class="fas fa-box"></i> Datos del producto</h3>
+                        <div class="form-group">
+                            <label for="fecha">Nombre del Producto</label>
+                            <input type="text" class="form-control" id="NombreProducto" placeholder="Nombre del Producto">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendedor"> Codigo del producto</label>
+                            <input type="text" class="form-control" id="codigoProducto" placeholder="Codigo del producto">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendedor"> Marca</label>
+                            <input type="text" class="form-control" id="MarcaProducto" placeholder="Marca del producto">
+                            <br>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#nuevamarca" id="btnMarcaModal"><i
+                                    class="fas fa-plus"></i> Agregar Marca</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vendedor"> Categoria</label>
+                            <input type="text" class="form-control" id="CategoriaProducto" placeholder="Categoria del producto">
+                            <br>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#nuevacategoria" id="BtnCategoria"><i
+                                    class="fas fa-plus"></i> Agregar categoria</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vendedor"> Stock</label>
+                            <input type="number" class="form-control" id="StockProductos" placeholder="stock del producto">
+                            <br>
+                        </div>
+                        <div class="form-group">
+                            <label for="vendedor"> Precio de Venta</label>
+                            <input type="text" class="form-control" id="PrecioVentaProd" placeholder="Precio de venta del productoC">
+                        </div>
+                        <div class="form-group">
+                            <label for="vendedor"> stock minimo</label>
+                            <input type="number" class="form-control" id="StockMin"
+                                placeholder="stock minimo del producto">
+                            <br>
+                            <button id="actualizar" class="btn btn-success"><i class="fas fa-sync"></i>
+                                Actualizar</button>
+                            <button id="guardar" class="btn btn-primary"><i class="fas fa-save"></i> Guardar</button>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                </div>
+            </div>
+        </section>
+        <section id="datagrid">
+            <h2 class="text-center">Productos Agregados</h2>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Producto</th>
+                            <th>Cod. Producto</th>
+                            <th>Categoría</th>
+                            <th>Marca</th>
+                            <th>Stock</th>
+                            <th>Stock Minimo</th>
+                            <th>Precio Venta</th>
+                            <th>Editar</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody2">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <section id="total-y-salir" class="mt-4 text-center">
+        <div class="container">
+            <div class="form-container">
+                <div class="row">
+                    <div class="col-md-6">
+                    </div>
+                    <div class="col-md-6">
+                        <button id="salir" class="btn btn-danger">
+                            <i class="fas fa-sign-out-alt"></i> Salir
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
+    <div class="modal fade" id="nuevamarca" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nueva Marca</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="nombreMarcaodal">Marca</label>
+                        <input type="text" class="form-control" id="nombreMarcaModal" placeholder="Marca">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary" id="BtnSaveMarca" data-dismiss="modal">Guardar</button>
+                        <button type="button" class="btn btn-success" id="BtnACtualizarMarca" data-dismiss="modal">Actualizar</button>
+                    </div>
+                    <div class="form-group">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Marca</th>
+                                        <th>Editar</th>
+                                        <th>Seleccionar</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tbody11">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                   
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="nuevacategoria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nueva categoria</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="nombreMarcaodal">Categoria</label>
+                        <input type="text" class="form-control" id="nombreCategoriaModal" placeholder="Categoria">
+                    </div>
+                    <div class="form-group">
+                        <label for="nombreMarcaodal">Descripcion</label>
+                        <input type="text" class="form-control" id="DescripcionCategoriaModal"
+                            placeholder="Descripcion Categoria">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary" id="BtnSaveCategoria" >Guardar</button>
+                        <button type="button" class="btn btn-success" id="BtnACtualizarCategoria" >Actualizar</button>
+                    </div>
+                    <div class="from-group">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Categoria</th>
+                                        <th>Descrpcion</th>
+                                        <th>Editar</th>
+                                        <th>Agregar Categoria</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tbody1">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                    
+               <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                
+               </div>
+        </div>
+    </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="JS/Productos.js"></script>
+</body>
+
+</html>

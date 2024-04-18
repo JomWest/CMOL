@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Proveedores de CellMasterOnline</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/usuario.css">
+</head>
+
+<body style="background-image: url('img/background-2.jpg');">
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="header-area">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/Logo.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="usuario.html">Usuarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Proveedores.html">Proveedores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ReporteInventario.html">Inventario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Facturacion.html">Facturar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ComprasProductos.html">Registrar Compras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Reportes.html">Reportes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="CambiarContraseña.html">Cambiar Contraseña</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <button class="help-button" onclick="redireccionarPagina()">
+            <i class="fas fa-question"></i> Ayuda
+        </button>
+        <script>
+            function redireccionarPagina() {
+                window.location.href = "ayudaProveedores.html";
+            }
+        </script>
+        <br>
+        <div class="container">
+            <section id="gestion-usuarios">
+                <h2>Gestión de Proveedores</h2>
+                <button class="btn btn-primary" id="nuevoProveedorBtn">Nuevo
+                    Proveedores</button>
+                <form id="userForm">
+                    <div class="form-row">
+                        <div class="form-group col-md-2">
+                            <label for="cedula">RUC</label>
+                            <input type="text" class="form-control" id="Ruc">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombre">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="nombre">Apellido</label>
+                            <input type="text" class="form-control" id="apellido">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="nombre">Empresa</label>
+                            <input type="text" class="form-control" id="Empresa">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="nombre">Departamento</label>
+                            <input type="text" class="form-control" id="Departamento">
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label for="nombre">Telefono</label>
+                            <input type="text" class="form-control" id="telefono">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="nombre">Email</label>
+                            <input type="text" class="form-control" id="email">
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="nombre">Direccion</label>
+                            <input type="text" class="form-control" id="direccion">
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-2">
+                        </div>
+                        <div class="form-group col-md-2">
+                        </div>
+                    </div>
+                    <button  class="btn btn-primary" id="GuardarProvedor">Guardar</button>
+                    <button  class="btn btn-success" id="Actualizarproveedor">Actualizar</button>
+                </form>
+                <br>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>RUC</th>
+                                <th>Nombre</th>
+                                <th>Empresa</th>
+                                <th>Teléfono</th>
+                                <th>Email</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+        </div>
+        <div class="modal fade" id="agregarUsuarioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Agregar Usuario</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="JS/Proveedores.js"></script>
+</body>
+
+</html>

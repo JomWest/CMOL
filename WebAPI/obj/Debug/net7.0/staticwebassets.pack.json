@@ -1,0 +1,241 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\CambiarContraseña.html",
+      "PackagePath": "staticwebassets\\CambiarContraseña.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\CambioDia.html",
+      "PackagePath": "staticwebassets\\CambioDia.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\Categoria.html",
+      "PackagePath": "staticwebassets\\Categoria.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\ComprasProductos.html",
+      "PackagePath": "staticwebassets\\ComprasProductos.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\Facturacion.html",
+      "PackagePath": "staticwebassets\\Facturacion.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\Inicio.html",
+      "PackagePath": "staticwebassets\\Inicio.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\JS\\CambiarContraseña.js",
+      "PackagePath": "staticwebassets\\JS\\CambiarContraseña.js"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\JS\\ComprasProductos.js",
+      "PackagePath": "staticwebassets\\JS\\ComprasProductos.js"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\JS\\Factura.js",
+      "PackagePath": "staticwebassets\\JS\\Factura.js"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\JS\\Ligin.js",
+      "PackagePath": "staticwebassets\\JS\\Ligin.js"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\JS\\Productos.js",
+      "PackagePath": "staticwebassets\\JS\\Productos.js"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\JS\\Proveedores.js",
+      "PackagePath": "staticwebassets\\JS\\Proveedores.js"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\JS\\RestablcerContra.js",
+      "PackagePath": "staticwebassets\\JS\\RestablcerContra.js"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\JS\\TipoCambio.js",
+      "PackagePath": "staticwebassets\\JS\\TipoCambio.js"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\JS\\Usuarios.js",
+      "PackagePath": "staticwebassets\\JS\\Usuarios.js"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\Login.html",
+      "PackagePath": "staticwebassets\\Login.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\Mantenimiento.html",
+      "PackagePath": "staticwebassets\\Mantenimiento.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\Marca.html",
+      "PackagePath": "staticwebassets\\Marca.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\Presentación1\\Diapositiva1.JPG",
+      "PackagePath": "staticwebassets\\Presentación1\\Diapositiva1.JPG"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\Presentación1\\Diapositiva2.JPG",
+      "PackagePath": "staticwebassets\\Presentación1\\Diapositiva2.JPG"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\Presentación1\\Diapositiva3.JPG",
+      "PackagePath": "staticwebassets\\Presentación1\\Diapositiva3.JPG"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\Presentación1\\Diapositiva4.JPG",
+      "PackagePath": "staticwebassets\\Presentación1\\Diapositiva4.JPG"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\Presentación1\\Diapositiva5.JPG",
+      "PackagePath": "staticwebassets\\Presentación1\\Diapositiva5.JPG"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\Presentación1\\Diapositiva6.JPG",
+      "PackagePath": "staticwebassets\\Presentación1\\Diapositiva6.JPG"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\Presentación1\\Diapositiva7.JPG",
+      "PackagePath": "staticwebassets\\Presentación1\\Diapositiva7.JPG"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\Presentación1\\Diapositiva8.JPG",
+      "PackagePath": "staticwebassets\\Presentación1\\Diapositiva8.JPG"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\Productos.html",
+      "PackagePath": "staticwebassets\\Productos.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\Proveedores.html",
+      "PackagePath": "staticwebassets\\Proveedores.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\ReporteCliente.html",
+      "PackagePath": "staticwebassets\\ReporteCliente.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\ReporteCompras.html",
+      "PackagePath": "staticwebassets\\ReporteCompras.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\ReporteFactura.html",
+      "PackagePath": "staticwebassets\\ReporteFactura.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\ReporteInventario.html",
+      "PackagePath": "staticwebassets\\ReporteInventario.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\Reportes.html",
+      "PackagePath": "staticwebassets\\Reportes.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\RestablecerContras.html",
+      "PackagePath": "staticwebassets\\RestablecerContras.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\Usuario.html",
+      "PackagePath": "staticwebassets\\Usuario.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\ayudaLoging.html",
+      "PackagePath": "staticwebassets\\ayudaLoging.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\ayudaProveedores.html",
+      "PackagePath": "staticwebassets\\ayudaProveedores.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\ayudacompra.html",
+      "PackagePath": "staticwebassets\\ayudacompra.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\ayudafacturacion.html",
+      "PackagePath": "staticwebassets\\ayudafacturacion.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\ayudaproducto.html",
+      "PackagePath": "staticwebassets\\ayudaproducto.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\ayudausuario.html",
+      "PackagePath": "staticwebassets\\ayudausuario.html"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\css\\Compras.css",
+      "PackagePath": "staticwebassets\\css\\Compras.css"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\css\\Facturacion.css",
+      "PackagePath": "staticwebassets\\css\\Facturacion.css"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\css\\Inicio.css",
+      "PackagePath": "staticwebassets\\css\\Inicio.css"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\css\\Login.css",
+      "PackagePath": "staticwebassets\\css\\Login.css"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\css\\Producto.css",
+      "PackagePath": "staticwebassets\\css\\Producto.css"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\css\\Proveedores.css",
+      "PackagePath": "staticwebassets\\css\\Proveedores.css"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\css\\Reportes.css",
+      "PackagePath": "staticwebassets\\css\\Reportes.css"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\css\\ayudacompra.css",
+      "PackagePath": "staticwebassets\\css\\ayudacompra.css"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\css\\usuario.css",
+      "PackagePath": "staticwebassets\\css\\usuario.css"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\img\\Fondo_Login.png",
+      "PackagePath": "staticwebassets\\img\\Fondo_Login.png"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\img\\Logo.png",
+      "PackagePath": "staticwebassets\\img\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\img\\background-2.jpg",
+      "PackagePath": "staticwebassets\\img\\background-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\img\\background.jpg",
+      "PackagePath": "staticwebassets\\img\\background.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Azazel\\OneDrive\\Escritorio\\JomwestVersione\\Prueba2\\WebAPI\\wwwroot\\reporte.html",
+      "PackagePath": "staticwebassets\\reporte.html"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.WebAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.WebAPI.props",
+      "PackagePath": "build\\WebAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.WebAPI.props",
+      "PackagePath": "buildMultiTargeting\\WebAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.WebAPI.props",
+      "PackagePath": "buildTransitive\\WebAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

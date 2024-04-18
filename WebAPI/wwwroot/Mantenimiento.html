@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de usuarios de CellMasterOnline</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="css/usuario.css">
+    <link rel="icon" href="../iconos/iconosOscuros/databaseDark.png">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-image: url('img/background-2.jpg');">
+    <div class="body">
+        <main class="container mt-4">
+            <div class="main">
+                <section class="container">
+                    <div class="encabezado"></div>
+                    <div class="container-body">
+                        <div class="form bg-light p-3 rounded">
+                            <h2 class="text-primary">Realizar Respaldo</h2>
+                            <div class="form-group">
+                                <label for="bdInput">BD</label>
+                                <input type="text" class="form-control" id="bdInput" required>
+                            </div>
+                            <div class="text-center">
+                                <button id="btnRespaldo" class="btn btn-primary">Respaldar</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="container mt-4">
+                    <div class="encabezado"></div>
+                    <div class="container-body">
+                        <div class="form bg-light p-3 rounded">
+                            <h2 class="text-primary">Restauración de BD</h2>
+                            <div class="form-group">
+                                <label for="bdInputRestore">BD</label>
+                                <input type="text" class="form-control" id="bdInputRestore" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="fileInput" class="d-block">Seleccionar archivo</label>
+                                <input type="file" id="fileInput" accept=".bak" class="form-control-file">
+                            </div>
+                            <div class="text-center">
+                                <button id="btnRestaurar" class="btn btn-primary">Restaurar</button>
+                                <div class="recuperar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="JS/Usuarios.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

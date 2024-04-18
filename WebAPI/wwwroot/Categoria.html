@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Categoria de CellMasterOnline</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/usuario.css">
+</head>
+<body>
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+          <span class="dot"></span>
+          <div class="dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <header class="header-area header-sticky">
+      
+    <div class="container">
+        <section id="gestion-usuarios">
+            <h2>Gestión de Categoria</h2>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#agregarUsuarioModal">Nueva Categoria</button>
+            <form id="userForm">
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                        <label for="cedula">Categoria</label>
+                        <input type="text" class="form-control" id="cedula">
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="nombre">Descripción</label>
+                        <input type="text" class="form-control" id="nombre">
+                    </div>
+                </div>
+                <div class="form-row">
+              
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                    </div>
+                    <div class="form-group col-md-2">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </form>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Categoria</th>
+                        <th>Descripcion</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Celular</td>
+                        <td>Descripción</td>
+                        <td>
+                            <a href="#"><i class="fas fa-edit"></i></a>
+                            <a href="#"><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <div class="modal fade" id="agregarUsuarioModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Agregar Usuario</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const userForm = document.getElementById("userForm");
+
+            // Event listener for form submission
+            userForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                // Obtener valores del formulario
+                const categoria = document.getElementById("cedula").value;
+                const descripcion = document.getElementById("nombre").value;
+
+                // Preparar datos para la solicitud
+                const data = {
+                    categoria,
+                    descripcion
+                };
+
+                fetch("http://localhost:puerto/cellmasterapi/ControladorDetalleFactura/Create", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Manejar el éxito
+                    console.log("Categoría creada:", data);
+ 
+                    // Puedes actualizar la interfaz de usuario para reflejar los cambios
+                })
+                .catch(error => {
+                    // Manejar errores
+                    console.error("Error al crear la categoría:", error);
+                });
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

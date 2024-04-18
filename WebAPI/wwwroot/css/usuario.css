@@ -1,0 +1,247 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1e1e1e;
+    font-size: 16px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+}
+
+.header-area {
+    background-color: transparent;
+    position: absolute;
+    height: 100px;
+    top: 10px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    -webkit-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+}
+
+.header-area .main-nav {
+    min-height: 100px;
+    background: transparent;
+    display: flex;
+    background-color: #fff;
+    padding: 20px 35px;
+    border-radius: 50px;
+}
+
+.header-area .main-nav .logo img {
+    width: 200px;
+}
+
+.header-area .main-nav .nav {
+    display: inline-flex;
+    flex-basis: 70%;
+    justify-content: flex-end;
+    vertical-align: middle;
+    text-align: right;
+    margin-top: 15px;
+    margin-right: 0px;
+    position: relative;
+    z-index: 999;
+}
+
+.header-area .main-nav .nav li {
+    padding-left: 9px;
+    padding-right: 9px;
+    display: inline-block;
+}
+
+.header-area .main-nav .nav li a {
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: capitalize;
+    color: #2a2a2a;
+    border: transparent;
+    padding: 8px 10px;
+    border-radius: 18px;
+    letter-spacing: 0.6px;
+}
+
+.header-area .main-nav .menu-trigger {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 33px;
+    width: 32px;
+    height: 30px;
+    text-indent: -9999em;
+    z-index: 99;
+    right: 20px;
+    display: none;
+}
+
+.header-area.header-sticky {
+    min-height: 70px;
+}
+
+@media (max-width: 992px) {
+    .header-area {
+        top: 0;
+    }
+    .header-area .main-nav {
+        background-color: transparent;
+        border-radius: 0px;
+        padding: 20px; /* Ajuste en el padding para mejorar la apariencia en dispositivos pequeños */
+    }
+    .header-area .main-nav .nav {
+        height: auto;
+        flex-basis: 100%;
+        justify-content: center; /* Centra los elementos del menú en pantallas pequeñas */
+        margin-top: 0;
+    }
+    .header-area .main-nav .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 15px;
+    }
+    .header-area .main-nav .border-button {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+}
+
+.header-area .main-nav .nav li a.active {
+    color: #fff;
+    background-color: #7453fc;
+}
+
+.header-area .main-nav .nav li a:hover {
+    color: #fff;
+    background-color: #7453fc;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.container {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+#gestion-usuarios {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.modal-content {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.table {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#userForm {
+    margin-top: 20px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.modal-body {
+    padding: 20px;
+}
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .navbar-toggler {
+        margin-top: 15px;
+    }
+    .navbar-brand img {
+        max-width: 100px; 
+        height: auto;
+    }
+}
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0vw;
+    height: 0vh;
+}
+.help-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: fixed;
+    top: 3px;
+    right: 5px; /* Cambiado a la esquina superior derecha */
+  }
+
+  .container-buttons {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #ffffff;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background-color: #2980b9;
+  }
+
+  img{
+    height: 50px;
+  }

@@ -1,0 +1,182 @@
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #1e1e1e;
+  font-size: 16px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.extra-content {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px; 
+
+}
+
+.extra-content .btn {
+  background-color: #7453fc;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 15px 25px;
+  margin: 10px;
+  cursor: pointer;
+}
+@media (min-width: 769px) {
+
+  .extra-content {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+}
+.extra-content .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.extra-content .form-control {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+}
+#nuevaVentaBtn, #cambioDia, #numeroFactura {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 500;
+  width: 100%;
+}
+#factura-form, #datagrid, #total-y-salir {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#factura-form h2, #datagrid h2, #total-y-salir h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.form-container {
+  padding: 20px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  font-weight: 500;
+}
+.form-control {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 500;
+  width: 100%;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+.modal-body {
+  padding: 20px;
+}
+#total-y-salir {
+  display: flex;
+  justify-content: space-between;
+}
+#total-y-salir .form-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#total-y-salir h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#total-y-salir .form-group {
+  margin-bottom: 20px;
+}
+
+#totalDolar, #totalCordobas {
+  background-color: #f2f2f2;
+  font-weight: 500;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+
+#salir {
+  background-color: #ff4b4b; 
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#salir:hover {
+  background-color: #ff0000; 
+}
+
+#salir i {
+  margin-right: 5px;
+}
+
+
+#nueva-venta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#nueva-venta-header h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+#nueva-venta-header input[type="text"] {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 500;
+  width: 100%;
+}
+
+#nueva-venta-header label {
+  font-weight: 500;
+  margin-right: 10px;
+}
+.help-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: fixed;
+  top: 10px;
+  right: 10px; /* Cambiado a la esquina superior derecha */
+}

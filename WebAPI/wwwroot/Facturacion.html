@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Facturas</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+  <link rel="stylesheet" href="css/Facturacion.css">
+</head>
+
+<body style="background-image: url('img/background-2.jpg');">
+  <button class="help-button" onclick="redireccionarPagina()">
+    <i class="fas fa-question"></i> Ayuda
+</button>
+<script>
+    function redireccionarPagina() {
+        window.location.href = "ayudafacturacion.html"; 
+    }
+</script>
+  <header class="header-area">
+  </header>
+  <div class="extra-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <button class="btn btn-primary" id="nuevaVentaBtn">Nueva Factura</button>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="cambioDia">Cambio del Día</label>
+            <input type="text" class="form-control" id="cambioDiaFact" placeholder="Cambio del día">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="numeroFactura">Número de Factura</label>
+            <input type="text" class="form-control" id="numeroFactura" placeholder="Número de factura">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-4">
+    <section id="factura-form">
+      <h2 class="text-center">Nueva Venta</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-container">
+            <h3><i class="fas fa-calendar"></i> Fecha</h3>
+            <div class="form-group">
+              <label for="fecha">Fecha</label>
+              <input type="date" class="form-control" id="fechaFactura" placeholder="Fecha del día">
+            </div>
+            <h3><i class="fas fa-user"></i> Vendedor</h3>
+            <div class="form-group">
+              <label for="vendedor">Vendedor</label>
+              <input type="text" class="form-control" id="vendedor" placeholder="Nombre del vendedor">
+            </div>
+            <h3><i class="fas fa-user"></i> Datos del Cliente</h3>
+            <button id="clientesFactBtn" class="btn btn-primary" data-toggle="modal" data-target="#nuevoClienteModal"><i
+                class="fas fa-plus"></i> Agregar Cliente</button>
+            <div class="form-group">
+              <label for="nombreCliente">Nombre</label>
+              <input type="text" class="form-control" id="nombreClienteFact" placeholder="Nombre del cliente">
+            </div>
+            <div class="form-group">
+              <label for="cedula">Cédula</label>
+              <input type="text" class="form-control" id="cedulaFact" placeholder="Ejemplo: xxx-xxxxxx-xxxx">
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input type="text" class="form-control" id="telefonoFact" placeholder="Número de teléfono">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-container">
+            <h3><i class="fas fa-box"></i> Datos del Producto</h3>
+            <div class="form-group">
+              <button id="agregarProduct" class="btn btn-primary" data-toggle="modal"
+                data-target="#gregarProductoModal"><i class="fas fa-plus"></i> AgregarPdoducto</button>
+            </div>
+            <div class="form-group">
+              <label for="producto">Producto</label>
+              <input type="text" class="form-control" id="NameProductFact" placeholder="Nombre del producto">
+            </div>
+
+            <div class="form-group">
+              <label for="codigoProducto">Código del Producto</label>
+              <input type="text" class="form-control" id="codigoProductofact" placeholder="Código del producto">
+            </div>
+            <div class="form-group">
+              <label for="categoria">Categoría</label>
+              <input type="text" class="form-control" id="categoriafact" placeholder="Categoría del producto">
+            </div>
+            <div class="form-group">
+              <label for="marca">Marca</label>
+              <input type="text" class="form-control" id="marcafact" placeholder="Marca del producto">
+            </div>
+            <div class="form-group">
+              <label for="cantidad">Cantidad</label>
+              <input type="text" class="form-control" id="cantidadProdcutoFact" placeholder="Cantidad">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-container">
+            <div class="form-group">
+              <label for="stockProducto">Stock del Producto</label>
+              <input type="text" class="form-control" id="stockProductoFact" placeholder="Stock del producto">
+            </div>
+            <div class="form-group">
+              <label for="precioDolar">Precio $</label>
+              <input type="number" class="form-control" id="precioDolarFact" placeholder="Precio en dólares">
+            </div>
+            <div class="form-group">
+              <label for="precioCordobas">Precio C$</label>
+              <input type="number" class="form-control" id="precioCosrdobaFact" placeholder="Precio en córdobas">
+            </div>
+            <button id="actualizar" class="btn btn-success"><i class="fas fa-sync"></i> Actualizar</button>
+            <button id="guardarProduct" class="btn btn-primary"><i class="fas fa-save"></i> Guardar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="datagrid">
+      <h2 class="text-center">Productos Agregados</h2>
+      <div class="table-responsive">
+        <table class="table" id="Table">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Producto</th>
+              <th>Cod. Producto</th>
+              <th>Categoría</th>
+              <th>Marca</th>
+              <th>Cantidad</th>
+              <th>Precio $</th>
+              <th>Precio C$</th>
+              <th>Editar</th>
+              <th>Eliminar</th>
+            </tr>
+          </thead>
+          <tbody class="tbodyYe">
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+  </div>
+  <section id="total-y-salir" class="mt-4 text-center">
+    <div class="container">
+      <div class="form-container">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Total en Precio</h3>
+            <div class="form-group">
+              <label for="totalDolar">Total $</label>
+              <input type="text" class="form-control" id="totalDolarfact" readonly>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h3>Total C$</h3>
+            <div class="form-group">
+              <label for="totalCordobas">Total C$</label>
+              <input type="text" class="form-control" id="totalCordobasFact" readonly>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button id="guardarFactura" class="btn btn-primary">
+        <i class="fas fa-save"></i> Guardar Factura
+      </button>
+      <button id="salir" class="btn btn-danger">
+        <i class="fas fa-sign-out-alt"></i> Salir
+      </button>
+    </div>
+  </section>
+
+  <div class="modal fade" id="nuevoClienteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Nuevo Cliente</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="nombreClienteModal">Nombre</label>
+            <input type="text" class="form-control" id="nombreClienteModal" placeholder="Nombre del cliente">
+          </div>
+          <div class="form-group">
+            <label for="nombreClienteModal">Apellido</label>
+            <input type="text" class="form-control" id="apellidoClienteModal" placeholder="Apellido del cliente">
+          </div>
+          <div class="form-group">
+            <label for="cedulaModal">Cédula</label>
+            <input type="text" class="form-control" id="cedulaModal" placeholder="Ejemplo: xxx-xxxxxx-xxxx">
+          </div>
+          <div class="form-group">
+            <label for="telefonoModal">Teléfono</label>
+            <input type="text" class="form-control" id="telefonoModal" placeholder="Número de teléfono">
+          </div>
+          <div class="form-group">
+            <button type="button" class="btn btn-primary" id="BtnSaveliente">Guardar</button>
+            <button type="button" class="btn btn-success" id="BtnACtualizarCliente"
+              data-dismiss="modal">Actualizar</button>
+          </div>
+          <div class="form-group">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Telefono</th>
+                    <th>Cedulda</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                    <th>Seleccionar</th>
+                  </tr>
+                </thead>
+                <tbody class="tbody90">
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="gregarProductoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Seleccionar Productos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+
+            <div class="form-group">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Id</th>
+                      <th>Producto</th>
+                      <th>Cod. Producto</th>
+                      <th>Categoría</th>
+                      <th>Marca</th>
+                      <th>Stock</th>
+                      <th>Stock Minimo</th>
+                      <th>Precio Venta</th>
+                      <th>Seleccionar</th>
+                    </tr>
+                  </thead>
+                  <tbody class="tbody99">
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="JS/Factura.js"></script>
+</body>
+
+</html>
